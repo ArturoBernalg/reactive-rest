@@ -1,3 +1,4 @@
+package reactive.rest;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,6 @@ public class GreetingHandler {
 
     public Mono<ServerResponse> hello(ServerRequest request) {
         return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
-                .body(BodyInserters.fromObject("Hello, Spring!"));
+                .body(BodyInserters.fromValue("Hello, Spring!"));
     }
 }
