@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
+        <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -36,6 +36,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.2.Final</version>
         </dependency>
 
 
@@ -84,6 +90,32 @@
                     </execution>
 
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.snyk</groupId>
+                <artifactId>snyk-maven-plugin</artifactId>
+                <version>1.2.5</version>
+                <executions>
+                    <execution>
+                        <id>snyk-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>snyk-monitor</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>monitor</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <apiToken>7d28bc29-188c-4257-8cfc-d47e408c7335</apiToken>
+                    <failOnSeverity>medium</failOnSeverity>
+                    <org></org>
+                </configuration>
             </plugin>
         </plugins>
     </build>
