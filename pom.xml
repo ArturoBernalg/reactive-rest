@@ -112,14 +112,13 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <apiToken>7d28bc29-188c-4257-8cfc-d47e408c7335</apiToken>
+                    <apiToken>${SNYK_API_TOKEN}</apiToken>
                     <failOnSeverity>medium</failOnSeverity>
                     <org></org>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>
