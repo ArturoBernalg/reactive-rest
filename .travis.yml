@@ -1,10 +1,5 @@
 language: java
 after_success:
   - mvn clean test jacoco:report coveralls:report
-  - snyk monitor
-  
-install:
-    - bundle install --path vendor/bundle
-    - snyk test
     
     
