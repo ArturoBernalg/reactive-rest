@@ -41,7 +41,7 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.1.2.Final</version>
+            <version>6.1.4.Final</version>
         </dependency>
 
 
@@ -114,7 +114,7 @@
                 <configuration>
                     <apiToken>${SNYK_API_TOKEN}</apiToken>
                     <failOnSeverity>medium</failOnSeverity>
-                    <org></org>
+                    <org/>
                 </configuration>
             </plugin>
         </plugins>
